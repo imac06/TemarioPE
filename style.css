@@ -1,6 +1,10 @@
-body {
+body {  
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    width: 80%; /* Ajusta el ancho del contenido */
+    max-width: 800px; /* Establece un ancho máximo para el contenido */
+    text-align: justify; /* Centrar el texto */
     font-family: Arial, sans-serif; /* Cambiar la fuente */
-    background-color: #e7d7d7; /* Cambiar el color de fondo */
+    background-color: #ffffff; /* Cambiar el color de fondo */
   }
   
   h2 {
@@ -20,11 +24,5 @@ body {
   p {
     font-size: 16px; /* Cambiar el tamaño de letra de los párrafos */
     line-height: 1.5; /* Ajustar el espaciado entre líneas */
-  }
-  
-  /* Opcional: Modificar la posición de un elemento específico */
-  intro {
-    text-align: center; /* Centrar el texto */
-    margin-top: 50px; /* Añadir margen superior */
   }
   
