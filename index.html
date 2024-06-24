@@ -4,7 +4,10 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema1: Estadística Descriptiva</title>
+  <title>Probabilidad y Estadística </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
@@ -109,6 +112,63 @@
     <li><strong>Muestreo por conveniencia:</strong> Una técnica en la que los elementos se seleccionan en función de su conveniencia o disponibilidad para el investigador.</li>
   </ul>
   <img src="imgs/tmuestreo.jpeg" alt="Representación grafica" width="600">
+
+  <h1>Tema 2: Fundamentos de la teoria de la probabilidad</h1>
+    
+    <h2>2.1 Técnicas de Conteo</h2>
+    
+    <img src="imgs/tconteo.jpeg" alt="Representación grafica" width="600">
+    
+    <h3>2.1.1 Principio aditivo</h3>
+    <p>El principio aditivo establece que si un evento puede ocurrir de <em>\( m \)</em> maneras diferentes y otro evento independiente de ese puede ocurrir de <em>\( n \)</em> maneras diferentes, entonces hay <em>\( m + n \)</em> maneras diferentes en las que al menos uno de los eventos puede ocurrir.</p>
+
+    <h3>2.1.2 Principio multiplicativo</h3>
+    <p>El principio multiplicativo establece que si un evento puede ocurrir de <em>\( m \)</em> maneras diferentes y otro evento independiente de ese puede ocurrir de <em>\( n \)</em> maneras diferentes, entonces hay <em>\( m × n \)</em> maneras diferentes en las que ambos eventos pueden ocurrir en secuencia.</p>
+
+    <h3>2.1.3 Notación factorial</h3>
+    <p>La notación factorial se representa como <em>\( n! \)</em> y representa el producto de todos los enteros positivos menores o iguales a <em>\( n \)</em>. Por ejemplo, <em>$$5! = 5 × 4 × 3 × 2 × 1 = 120$$</em>.</p>
+
+    <h3>2.1.4 Permutaciones</h3>
+    <p>Las permutaciones son el número de arreglos ordenados de <em>\( r \)</em> elementos tomados de <em>\( n \)</em> elementos distintos. Se denota como <em>$$P(n, r) = \frac{n!}{(n-r)!}$$</em>.</p>
+
+    <h3>2.1.5 Combinaciones</h3>
+    <p>Las combinaciones son el número de subconjuntos no ordenados de <em>\( r \)</em> elementos tomados de <em>\( n \)</em> elementos distintos. Se denota como <em>$$C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}$$</em>.</p>
+
+    <h3>2.1.6 Diagrama de Árbol</h3>
+    <p>El diagrama de árbol es una representación gráfica que ayuda a visualizar todas las posibles ramas de decisiones y sus resultados en un proceso de conteo.</p>
+
+    <h3>2.1.7 Teorema del Binomio</h3>
+    <p>El teorema del binomio establece cómo expandir <em>\((a + b)^n \)</em> utilizando la fórmula <em>$$(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$$</em>.</p>
+
+    <h2>2.2 Teoría elemental de probabilidad</h2>
+    <p>La teoría elemental de probabilidad estudia los experimentos aleatorios y los eventos que pueden ocurrir en esos experimentos. Se basa en conceptos como el espacio muestral, eventos, y la asignación de probabilidades a esos eventos.</p>
+
+    <h2>2.3 Probabilidad de Eventos</h2>
+    <ul>
+        <li><strong>Espacio muestral:</strong> Conjunto de todos los posibles resultados de un experimento.</li>
+        <li><strong>Evento:</strong> Subconjunto del espacio muestral.</li>
+        <li><strong>Simbología:</strong> Usualmente se utilizan letras mayúsculas para representar conjuntos y letras minúsculas para representar eventos específicos.</li>
+        <li><strong>Unión e intersección:</strong> Operaciones entre eventos que representan, respectivamente, que al menos uno o ambos eventos ocurren, y que ambos eventos ocurren simultáneamente.</li>
+        <li><strong>Diagramas de Venn:</strong> Diagramas que ilustran las relaciones entre conjuntos y eventos mediante áreas superpuestas.</li>
+    </ul>
+
+    <h2>2.4 Probabilidad con Técnicas de Conteo</h2>
+    <p>Incorpora las técnicas de conteo en la asignación de probabilidades a eventos y la resolución de problemas de probabilidad.</p>
+    <img src="imgs/tconteo2.gif" alt="Representación grafica" width="600">
+    
+    <h2>2.5 Probabilidad condicional</h2>
+    <ul>
+        <li><strong>Dependiente e independiente:</strong> Eventos dependientes son aquellos cuya ocurrencia está afectada por la ocurrencia de otro evento. Eventos independientes son aquellos cuya ocurrencia no está afectada por otro evento.</li>
+        <li><strong>Ley multiplicativa:</strong> <em>\( P(A ∩ B) = P(A) × P(B | A) \)</em>, donde <em>\( P(B | A) \)</em> es la probabilidad de <em>\( B \)</em> dado <em>\( A \)</em>.</li>
+    </ul>
+
+    <h2>2.6 Ley multiplicativa</h2>
+    <p>La ley multiplicativa establece cómo calcular la probabilidad conjunta de dos eventos, generalizando la probabilidad condicional para eventos independientes.</p>
+
+    <h2>2.7 Eventos independientes</h2>
+    <ul>
+        <li><strong>Regla de Bayes:</strong> Permite actualizar la probabilidad de un evento dado nueva evidencia.</li>
+    </ul>
 
 </body>
 </html>
