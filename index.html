@@ -129,10 +129,10 @@
     <p>La notación factorial se representa como <em>\( n! \)</em> y representa el producto de todos los enteros positivos menores o iguales a <em>\( n \)</em>. Por ejemplo, <em>$$5! = 5 × 4 × 3 × 2 × 1 = 120$$</em>.</p>
 
     <h3>2.1.4 Permutaciones</h3>
-    <p>Las permutaciones son el número de arreglos ordenados de <em>\( r \)</em> elementos tomados de <em>\( n \)</em> elementos distintos. Se denota como <em>$$(nPr) = \frac{n!}{(n-r)!}$$</em>.</p>
+    <p>Las permutaciones son el número de arreglos ordenados de <em>\( r \)</em> elementos tomados de <em>\( n \)</em> elementos distintos. Se denota como <em>$$ nPr = \frac{n!}{(n-r)!}$$</em>.</p>
 
     <h3>2.1.5 Combinaciones</h3>
-    <p>Las combinaciones son el número de subconjuntos no ordenados de <em>\( r \)</em> elementos tomados de <em>\( n \)</em> elementos distintos. Se denota como <em>$$(nCr) = \binom{n}{r} = \frac{n!}{r!(n-r)!}$$</em>.</p>
+    <p>Las combinaciones son el número de subconjuntos no ordenados de <em>\( r \)</em> elementos tomados de <em>\( n \)</em> elementos distintos. Se denota como <em>$$ nCr = \binom{n}{r} = \frac{n!}{r!(n-r)!}$$</em>.</p>
 
     <h3>2.1.6 Diagrama de Árbol</h3>
     <p>El diagrama de árbol es una representación gráfica que ayuda a visualizar todas las posibles ramas de decisiones y sus resultados en un proceso de conteo.</p>
@@ -218,6 +218,126 @@
 
   <h3>3.2.5 Cálculos de probabilidad</h3>
   <p>Para variables aleatorias continuas, los cálculos de probabilidad se realizan mediante integrales de la función de densidad de probabilidad en intervalos específicos.</p>
+
+  <h1 style="text-align: center;"> Tema 4. distribuciones de Probabilidad</h1>
+
+  <h3>4. Distribuciones de Probabilidad</h3>
+  <p>Las distribuciones de probabilidad son funciones matemáticas que describen la probabilidad de ocurrencia de diferentes resultados en un experimento aleatorio. Cada distribución se aplica a diferentes tipos de situaciones dependiendo de las características del fenómeno estudiado.</p>
+
+  <h3>4.1 Función de probabilidad</h3>
+  <p>Es una función matemática que asigna a cada evento de un espacio muestral una probabilidad de ocurrencia. Para una variable aleatoria discreta, la función de probabilidad se conoce como función de masa de probabilidad, y para una variable aleatoria continua, se conoce como función de densidad de probabilidad.</p>
+  <p style="text-align: center;"><em>\( P(X = x) = P(x) \)</em></p>
+
+  <h3>4.2 Distribución binomial</h3>
+  <p>Modela el número de éxitos en una secuencia de ensayos independientes de un experimento, cada uno con dos resultados posibles (éxito o fracaso), con una probabilidad fija de éxito.</p>
+  <img src="imgs/dbinomial.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(k; n, p) = \binom{n}{k} p^k (1-p)^{n-k} \)</em></p>
+  <p>Donde:</p>
+    <ul>
+        <li>\(f(k; n, p) \): Probabilidad de obtener exactamente \( k \) éxitos.</li>
+        <li>\( n \): Número total de ensayos o pruebas.</li>
+        <li>\( k \): Número de éxitos deseados.</li>
+        <li>\( p \): Probabilidad de éxito en cada ensayo.</li>
+        <li>\( \binom{n}{k} \): Coeficiente binomial, calculado como \( \binom{n}{k} = \frac{n!}{k!(n-k)!} \).</li>
+    </ul>
+
+  <h3>4.3 Distribución hipergeométrica</h3>
+  <p>Describe el número de éxitos en una muestra extraída sin reemplazo de una población finita, dividida en dos grupos (éxito y fracaso), donde el número de éxitos en la muestra es de interés.</p>
+  <img src="imgs/dhipergeometrica.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(k; N, n, K) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}} \)</em></p>
+  <p>Donde:</p>
+    <ul>
+        <li>\( f(k; N, n, K) \): Probabilidad de obtener exactamente \( k \) éxitos en la muestra.</li>
+        <li>\( N \): Tamaño total de la población.</li>
+        <li>\( K \): Número total de elementos en la población que son de interés (éxitos).</li>
+        <li>\( n \): Tamaño de la muestra (número de ensayos).</li>
+        <li>\( \binom{N}{n} \): Coeficiente binomial que representa el número de formas de seleccionar \( n \) elementos de un conjunto de \( N \) elementos.</li>
+    </ul>
+
+  <h3>4.4 Distribución de Poisson</h3>
+  <p>Modela el número de eventos que ocurren en un intervalo de tiempo o espacio fijo, cuando estos eventos ocurren de manera independiente a una tasa promedio constante.</p>
+  <img src="imgs/dpoisson.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(k; \lambda) = \frac{e^{-\lambda} \lambda^k}{k!} \)</em></p>
+  <p>Donde:</p>
+    <ul>
+        <li>\( f(k; \lambda) \): Probabilidad de observar exactamente \( k \) eventos.</li>
+        <li>\( \lambda \): Parámetro de la distribución de Poisson, que representa la tasa promedio de eventos por intervalo de tiempo o espacio.</li>
+        <li>\( k \): Número de eventos que queremos evaluar.</li>
+        <li>\( e \): Base del logaritmo natural (aproximadamente \( 2.71828 \)).</li>
+        <li>\( k! \): Factorial de \( k \), que es el producto de todos los enteros positivos menores o iguales a \( k \).</li>
+    </ul>
+
+  <h3>4.5 Distribución normal</h3>
+  <p>Es una de las distribuciones más importantes en estadística. Es continua y simétrica alrededor de su media. Muchos fenómenos naturales siguen aproximadamente esta distribución.</p>
+  <img src="imgs/dnormal.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(x; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \)</em></p>
+  <p>Donde:</p>
+  <ul>
+      <li>\( f(x; \mu, \sigma^2) \): Función de densidad de probabilidad de la distribución normal.</li>
+      <li>\( \mu \): Media (o valor esperado) de la distribución, que indica el punto central de la distribución.</li>
+      <li>\( \sigma \): Desviación estándar, que mide la dispersión de los datos alrededor de la media.</li>
+      <li>\( e \): Base del logaritmo natural (aproximadamente \( 2.71828 \)).</li>
+      <li>\( \pi \): Constante matemática pi (\( \pi \approx 3.14159 \)).</li>
+  </ul>
+
+  <h3>4.6 Distribución T-student</h3>
+  <p>Utilizada para inferencias estadísticas sobre la media de una población cuando el tamaño de la muestra es pequeño y/o la desviación estándar de la población es desconocida.</p>
+  <img src="imgs/dtstudent.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(t; \nu) = \frac{\Gamma\left(\frac{\nu + 1}{2}\right)}{\sqrt{\nu \pi} \, \Gamma\left(\frac{\nu}{2}\right)} \left(1 + \frac{t^2}{\nu}\right)^{-\frac{\nu + 1}{2}} \)</em></p>
+  <p>Donde:</p>
+    <ul>
+        <li>\( f(t; \nu) \): Función de densidad de probabilidad de la distribución T de Student.</li>
+        <li>\( t \): Variable aleatoria que sigue la distribución T de Student.</li>
+        <li>\( \nu \): Parámetro de la distribución T de Student, conocido como los grados de libertad.</li>
+        <li>\( \Gamma \): Función gamma, que es una generalización del factorial para números reales y complejos.</li>
+        <li>\( \pi \): Constante matemática pi (\( \pi \approx 3.14159 \)).</li>
+    </ul>
+
+  <h3>4.7 Distribución Chi cuadrada</h3>
+  <p>Se utiliza principalmente para probar la independencia de dos conjuntos de datos categóricos y para probar la bondad de ajuste de un modelo estadístico a un conjunto de datos observados.</p>
+  <img src="imgs/dchicuadrada.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(x; k) = \frac{1}{2^{k/2} \Gamma\left(\frac{k}{2}\right)} x^{(k/2) - 1} e^{-x/2} \)</em></p>
+  <p>Donde:</p>
+  <ul>
+      <li>\( f(x; k) \): Función de densidad de probabilidad de la distribución Chi-cuadrada.</li>
+      <li>\( x \): Variable aleatoria que sigue la distribución Chi-cuadrada.</li>
+      <li>\( k \): Parámetro de la distribución Chi-cuadrada, que representa los grados de libertad.</li>
+      <li>\( \Gamma \): Función gamma, que es una generalización del factorial para números reales y complejos.</li>
+  </ul>
+
+  <h3>4.8 Distribución F</h3>
+  <p>Se utiliza para comparar la varianza de dos poblaciones normales independientes. Se emplea comúnmente en análisis de varianza y en pruebas de regresión para comparar varianzas entre dos o más grupos.</p>
+  <img src="imgs/df.png" alt="Representación grafica" width="600">
+  <ul>
+    <li>La fórmula para calcularla es:</li>
+  </ul>
+  <p style="text-align: center;"><em>\( f(x; d1, d2) = \frac{\sqrt{\frac{(d1 \cdot x)^{d1} \cdot d2^{d2}}{(d1 \cdot x + d2)^{d1 + d2}}}}{x \cdot \beta\left(\frac{d1}{2}, \frac{d2}{2}\right)}  \)</em></p>
+  <p>Donde:</p>
+  <ul>
+      <li>\( f(x; d1, d2) \): Función de densidad de probabilidad de la distribución F.</li>
+      <li>\( x \): Variable aleatoria que sigue la distribución F.</li>
+      <li>\( d1 \) y \( d2 \): Parámetros de la distribución F, que representan los grados de libertad del numerador y del denominador respectivamente.</li>
+      <li>\( \beta \): Función beta, definida como \( \beta(x, y) = \frac{\Gamma(x) \cdot \Gamma(y)}{\Gamma(x + y)} \).</li>
+      <li>\( \Gamma \): Función gamma, que es una generalización del factorial para números reales y complejos.</li>
+  </ul>
 
 </body>
 </html>
