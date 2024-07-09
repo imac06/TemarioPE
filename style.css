@@ -25,4 +25,16 @@ body {
     font-size: 16px; /* Cambiar el tamaño de letra de los párrafos */
     line-height: 1.5; /* Ajustar el espaciado entre líneas */
   }
+
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ebe4e4;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   
