@@ -339,5 +339,50 @@
       <li>\( \Gamma \): Función gamma, que es una generalización del factorial para números reales y complejos.</li>
   </ul>
 
+<h1 style="text-align: center;">5. Regresión lineal</h1>
+
+<h3>5.1 Regresión y correlación</h3>
+<p>La regresión lineal y la correlación son dos conceptos estadísticos estrechamente relacionados que se utilizan para analizar la relación entre dos variables.</p>
+<img src="imgs/regresion_and_correlation.png" alt="Representación grafica" width="600">
+
+<h3>5.1.1 Diagrama de dispersión</h3>
+<p>Un diagrama de dispersión es una representación gráfica de la relación entre dos variables. Se crea trazando los puntos de datos para cada variable en un plano cartesiano. La variable independiente (variable predictora) se representa en el eje horizontal <em>\( X \)</em> y la variable dependiente (variable de respuesta) se representa en el eje vertical <em>\( Y \)</em>. Al observar la distribución de los puntos de datos en el diagrama de dispersión, se puede obtener una idea visual de la fuerza y la dirección de la relación entre las variables.</p>
+<img src="imgs/dispersion.png" alt="Representación grafica" width="600">
+
+<h3>5.1.2 Regresión lineal simple</h3>
+<p>La regresión lineal simple es un modelo estadístico que describe la relación lineal entre una variable independiente <em>\( X \)</em> y una variable dependiente <em>\( Y \)</em>. El modelo se representa mediante una ecuación de línea recta:</p>
+<p style="text-align: center;"><em>\( Y = β0 + β1 * X + ε \)</em></p>
+<p>Donde:</p>  
+<ul>
+    <li><em>\( Y \)</em> es la variable dependiente</li>
+    <li><em>\( X \)</em> es la variable independiente</li>
+    <li><em>\( β0 \)</em> es el intercepto de la línea (el valor de Y cuando X = 0)</li>
+    <li><em>\( β1 \)</em> es la pendiente de la línea (la cantidad en que cambia Y por cada unidad de cambio en X)</li>
+    <li><em>\( ε \)</em> es el término de error (representa la variabilidad no explicada por el modelo)</li>
+</ul>
+
+<p>El objetivo de la regresión lineal simple es encontrar los valores de <em>\( β0 \)</em> y <em>\( β1 \)</em> que mejor se ajusten a los datos observados. Esto se puede hacer utilizando métodos como los mínimos cuadrados.</p>
+
+<h3>5.1.3 Correlación</h3>
+<p>La correlación mide la fuerza y la dirección de la relación lineal entre dos variables. Se expresa mediante un coeficiente de correlación, que se representa con la letra <em>\( r \)</em>. El valor de <em>\( r \)</em> puede variar entre -1 y 1:</p>
+<ul>
+  <li><em>\( r = 1 \)</em>: indica una correlación positiva perfecta, lo que significa que las dos variables aumentan o disminuyen juntas en la misma proporción.</li>
+  <li><em>\( r = 0 \)</em>: indica que no hay correlación lineal entre las variables.</li>
+  <li><em>\( r = -1 \)</em>: indica una correlación negativa perfecta, lo que significa que a medida que una variable aumenta, la otra disminuye en la misma proporción.</li>
+</ul>
+<p>En general, un valor absoluto de <em>\( r \)</em> más cercano a 1 indica una relación más fuerte entre las variables, ya sea positiva o negativa.</p>
+<img src="imgs/corr.png" alt="Representación grafica" width="600">
+
+<h3>5.1.4 Determinación y análisis de los coeficientes de correlación y de determinación</h3>
+<p>Coeficiente de correlación: El coeficiente de correlación <em>\( r \)</em> mide la fuerza y la dirección de la relación lineal entre dos variables. Se interpreta como la proporción de la variabilidad total de la variable dependiente que puede explicarse por la variabilidad de la variable independiente.</p>
+<p>Coeficiente de determinación: El coeficiente de determinación <em>\( R² \)</em> es el cuadrado del coeficiente de correlación <em>\( r² \)</em>. Representa la proporción de la variabilidad total de la variable dependiente que puede explicarse por el modelo de regresión lineal. Un valor de <em>\( R² \)</em> cercano a 1 indica que el modelo explica una gran parte de la variabilidad de la variable dependiente.</p>
+
+<h3>5.1.5 Distribución normal bidimensional</h3>
+<p>La distribución normal bidimensional es una distribución de probabilidad conjunta que describe la distribución de dos variables aleatorias continuas. Se caracteriza por una superficie en forma de campana que se eleva sobre el plano cartesiano. La forma y la orientación de la superficie dependen de la correlación entre las variables.</p>
+<img src="imgs/dnormalbin.png" alt="Representación grafica" width="400">
+
+<h3>5.1.6 Intervalos de confianza</h3>
+<p>Los intervalos de confianza son rangos de valores que tienen una alta probabilidad de contener el valor verdadero de un parámetro desconocido. Se calculan utilizando la distribución muestral de la estadística de prueba. En el contexto de la regresión lineal, los intervalos de confianza se pueden utilizar para estimar el valor verdadero de los coeficientes de regresión <em>\( β0 \)</em> y <em>\( β1 \)</em> y la media de la variable dependiente para un valor dado de la variable independiente.</p>
+
 </body>
 </html>
